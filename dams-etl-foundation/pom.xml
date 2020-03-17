@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dams</artifactId>
+        <groupId>com.hanl.dams</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>Etl-foundation</artifactId>
+    <dependencies>
+        <dependency> <!-- see https://code.google.com/p/guava-libraries -->
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.0-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
+        <dependency> <!-- see http://metrics.codahale.com -->
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <dependency> <!-- see http://metrics.codahale.com -->
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-healthchecks</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
+    </dependencies>
+    <!-- 项目配置 如果这里不配置执行目标，或者执行所在的生命周期，执行后是不会产生效果的 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.hanl.dams</groupId>
+                <artifactId>generate-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <generateDir>D:\eclipse-workspace\flusso\dams\dams-etl-foundation\src\main\java\com\hanl\etl\param</generateDir>
+                    <packagePath>com.hanl.etl.param</packagePath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!-- 执行目标 -->
+                            <goal>generateParamJava</goal>
+                        </goals>
+                        <!-- 执行这个目标所在的生命周期 -->
+                        <phase>process-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
