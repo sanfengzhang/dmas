@@ -2,8 +2,10 @@ package com.hanl.dams.entity;
 
 /**
  * @author: Hanl
- * @date :2020/3/17
+ * @date :2020/3/23
  * @desc:
  */
-public class MetaFieldEntity extends DataField{
+public interface BaseEntity {
+
+
 }
