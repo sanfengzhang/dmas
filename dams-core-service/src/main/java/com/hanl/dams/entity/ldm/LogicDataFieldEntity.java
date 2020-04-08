@@ -15,10 +15,14 @@ public class LogicDataFieldEntity {
      */
     private String logicDataFieldName;
 
-
     /**
      * 数据字段的约束规范:数字、字符串、以1开头的序列号、值映射等
      */
     private String constraintSpec;
+
+    /**
+     * 对该数据字段的额外描述说明
+     */
+    private String description;
 
 }

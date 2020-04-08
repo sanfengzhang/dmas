@@ -18,7 +18,7 @@ import java.util.Set;
 @Entity
 @Table(name = "tb_operator")
 @EqualsAndHashCode(of = {"id"})
-public class OperatorEntity {
+public class OperatorClazzEntity {
 
     @Id
     @GenericGenerator(name = "jpa-uuid", strategy = "uuid")

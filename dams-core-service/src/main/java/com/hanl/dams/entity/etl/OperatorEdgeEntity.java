@@ -7,7 +7,7 @@ package com.hanl.dams.entity.etl;
  */
 public class OperatorEdgeEntity {
 
-    private UIOperatorEntity startOperator;
+    private OperatorUIEntity startOperator;
 
-    private UIOperatorEntity endOperator;
+    private OperatorUIEntity endOperator;
 }

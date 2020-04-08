@@ -8,14 +8,19 @@ package com.hanl.etl.api;
 public interface Operator<T extends RecordWrapper> {
 
 
-    void notify(T notification);
+    default  void notify(T notification){}
 
 
-    boolean process(RecordWrapper record);
+    default boolean process(RecordWrapper record){
+        return true;
+    }
 
     /**
      * Returns the parent of this command. The parent of a command A is the command B that passes
      * records to A. A is the child of B.
      */
-    Operator getParent();
+    default  Operator getParent(){
+
+        return null;
+    }
 }

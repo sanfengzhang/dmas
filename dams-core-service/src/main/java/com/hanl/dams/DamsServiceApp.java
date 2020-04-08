@@ -5,7 +5,7 @@ package com.hanl.dams;
  * @date :2020/3/13
  * @desc:
  */
-public class DamsApp {
+public class DamsServiceApp {
 
 
 }

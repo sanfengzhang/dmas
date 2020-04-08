@@ -6,5 +6,5 @@ package com.hanl.dams.entity.etl;
  * @desc:
  * UI层的描述算子在流程图中的展现，比如top,left等位置
  */
-public class UIOperatorEntity {
+public class OperatorUIEntity {
 }

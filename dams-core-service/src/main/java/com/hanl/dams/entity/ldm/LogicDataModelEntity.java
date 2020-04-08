@@ -8,8 +8,10 @@ import java.util.Set;
 /**
  * @author: Hanl
  * @date :2020/3/19
- * @desc: 业务逻辑层数据模型
- * 逻辑模型主要面对业务、部门、企业级别的数据，这些数据有着清晰的定义和描述
+ * @desc: 逻辑层数据模型 *
+ *这里的逻辑数据模型不面向任何业务，具体的业务应该是基于这些逻辑模型实体去
+ * 创建的业务流程。
+ *
  */
 @Data
 public class LogicDataModelEntity {

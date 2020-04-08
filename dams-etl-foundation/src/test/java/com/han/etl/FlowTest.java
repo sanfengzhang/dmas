@@ -14,6 +14,7 @@ import com.hanl.etl.operator.api.SplitVO;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -22,6 +23,27 @@ import java.util.*;
  * @desc:
  */
 public class FlowTest {
+
+    @Test
+    public void testMonth() throws Exception{
+
+        String date="201609";
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyyMM");
+        System.out.println(dateFormat.parse(date));
+
+        List<String> list=new ArrayList<>();
+        list.add("111");
+        list.add("222");
+        list.add("333");
+        list.add("444");
+        Iterator<String> it=list.iterator();
+        while (it.hasNext()){
+            String a=it.next();
+            a="aaa";
+        }
+
+        System.out.println(list.toString());
+    }
 
     @Test
     public void buildFlowByMapRecord() {

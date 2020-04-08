@@ -5,5 +5,5 @@ package com.hanl.dams.entity.etl;
  * @date :2020/3/17
  * @desc:
  */
-public class DefiniteOperatorEntity {
+public class OperatorInstanceEntity {
 }
