@@ -1,5 +1,10 @@
 package com.hanl.etl.api;
 
+import jdk.internal.org.objectweb.asm.Handle;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author: Hanl
  * @date :2020/4/2
@@ -12,5 +17,10 @@ package com.hanl.etl.api;
  */
 public class AbstractConfigOperator implements Operator {
 
+    private Map<String,Object> configMap=new HashMap<>();
 
+
+    public Map<String, Object> getConfigMap() {
+        return configMap;
+    }
 }

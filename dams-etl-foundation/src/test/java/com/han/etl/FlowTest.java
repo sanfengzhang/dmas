@@ -25,21 +25,21 @@ import java.util.*;
 public class FlowTest {
 
     @Test
-    public void testMonth() throws Exception{
+    public void testMonth() throws Exception {
 
-        String date="201609";
-        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyyMM");
+        String date = "201609";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMM");
         System.out.println(dateFormat.parse(date));
 
-        List<String> list=new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("111");
         list.add("222");
         list.add("333");
         list.add("444");
-        Iterator<String> it=list.iterator();
-        while (it.hasNext()){
-            String a=it.next();
-            a="aaa";
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            String a = it.next();
+            a = "aaa";
         }
 
         System.out.println(list.toString());
@@ -91,17 +91,24 @@ public class FlowTest {
         Flow<MapRecordWrapper> flow = new Compiler<MapRecordWrapper>().compile(JSON.parseObject(JSON.toJSONString(flowVO), Map.class), flowContext, collectOperator);
 
         long start = System.currentTimeMillis();
+        double count = 5000_0000.0D;
+        for (int i = 0; i < count; i++) {
+            mockProcess(flow, collectOperator);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+        System.out.println(count/((end - start)/1000.0D)) ;
+    }
+
+    private void mockProcess(Flow<MapRecordWrapper> flow, CollectOperator<MapRecordWrapper> collectOperator) {
         MapRecordWrapper record = new MapRecordWrapper();
-        record.put("message", "zhangsan|12");
-        boolean success = flow.process(record);
-        List<RecordWrapper> result = collectOperator.getRecords();
+        record.put("message", "Foreigners in China get equal treatment|12|Foreigners in China get equal treatment|Foreigners in China get equal treatment|Foreigners in China get equal treatment|Foreigners in China get equal treatment");
+        flow.process(record);
+        collectOperator.reset();
 
         //TODO ArrayList使用ForEach有性能效率问题
-        for (RecordWrapper recordWrapper : result) {
-            System.out.println(recordWrapper.toString());
-        }
-        System.out.println(success);
-        long end = System.currentTimeMillis();
-        System.out.println(end - start);
+        /**  for (RecordWrapper recordWrapper : result) {
+         System.out.println(recordWrapper.toString());
+         } **/
     }
 }

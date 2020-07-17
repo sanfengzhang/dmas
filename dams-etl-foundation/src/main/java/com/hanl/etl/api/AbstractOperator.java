@@ -130,7 +130,6 @@ public abstract class AbstractOperator<T extends RecordWrapper> implements Opera
         if (!success) {
             LOG.debug("Command failed!");
         }
-        System.out.println(end-start);
         return success;
     }
 

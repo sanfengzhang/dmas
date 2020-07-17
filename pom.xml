@@ -20,7 +20,9 @@
         <module>dams-etl-foundation</module>
         <module>dams-common</module>
         <module>generate-maven-plugin</module>
-        <module>dams-web-service</module>
+        <module>dams-core-service</module>
+        <module>hpf-framwork</module>
+        <module>spark-servicce</module>
     </modules>
 	
 	<dependencies>
@@ -48,11 +50,11 @@
             <version>1.2.17</version>
             <scope>provided</scope>
         </dependency>
-		 <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>25.0-jre</version>
-        </dependency>
+<!--		 <dependency>-->
+<!--            <groupId>com.google.guava</groupId>-->
+<!--            <artifactId>guava</artifactId>-->
+<!--            <version>25.0-jre</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>

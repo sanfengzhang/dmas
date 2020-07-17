@@ -5,7 +5,7 @@ package com.hanl.etl.operator.api;
  * @date :2020/3/11
  * @desc:
  */
-public interface OperatorParamVO {
+public interface  OperatorParamVO {
 
     public String name();
 
