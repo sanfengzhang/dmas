@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
+            <version>1.2.83</version>
         </dependency>
     </dependencies>
     <!-- 项目配置 如果这里不配置执行目标，或者执行所在的生命周期，执行后是不会产生效果的 -->
